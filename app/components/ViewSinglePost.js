@@ -111,10 +111,14 @@ function ViewSinglePost(props) {
       </div>
 
       <p className="text-muted small mb-4">
-        <a href="#">
+        <Link to={`/profile/${post.author.username}`}>
           <img className="avatar-tiny" src={post.author.avatar} />
-        </a>
-        Posted by <a href="#">{post.author.username}</a> on {dateFormatted}
+        </Link>
+        Posted by{" "}
+        <Link to={`/profile/${post.author.username}`}>
+          {post.author.username}
+        </Link>{" "}
+        on {dateFormatted}
       </p>
 
       <div className="body-content">
