@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { useImmerReducer } from "use-immer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Axios from "axios";
-Axios.defaults.baseURL = process.env.BACKENDURL || "";
+Axios.defaults.baseURL =
+  process.env.BACKENDURL || "https://complexappudemy.herokuapp.com";
 import { CSSTransition } from "react-transition-group";
 
 import StateContext from "./StateContext";
